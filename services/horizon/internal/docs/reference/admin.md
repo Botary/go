@@ -34,14 +34,13 @@ Should you decide not to use one of our prebuilt releases, you may instead build
 
 - A unix-like operating system with the common core commands (cp, tar, mkdir, bash, etc.)
 - A compatible distribution of go (we officially support go 1.6 and later)
-- [glide](https://glide.sh/)
+- [dep](https://golang.github.io/dep/)
 - [git](https://git-scm.com/)
-- [mercurial](https://www.mercurial-scm.org/)
 
 Provided your workstation satisfies the requirements above, follow the steps below:
 
 1. Clone horizon's source:  `go get github.com/stellar/go && cd $GOPATH/src/github.com/stellar/go/`
-2. Under the project folder, download external dependencies: `glide install`
+2. Under the project folder, download external dependencies: `dep ensure -v`
 3. Build the binary: `go install github.com/stellar/go/services/horizon`
 
 After running the above commands have succeeded, the built horizon will have been written into the `bin` subdirectory of your $GOPATH.
